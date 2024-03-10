@@ -15,7 +15,18 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+        int countForY = 0;
+        int countForX = 0;
+
+        String[] letters = input.split(" ");
+        for (String letter : letters)
+            if (letter.toLowerCase().endsWith("y")) {
+                countForY++;
+            }
+            else if (letter.toLowerCase().endsWith("x")) {
+                countForX++;
+        }
+        return countForX + countForY;
     }
 
     /**
@@ -28,7 +39,8 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
-        return null;
+        String newBase = base.replace(remove, ""); // .replace will just replace the string with the 'remove value'
+        return newBase; // return the new string
     }
 
     /**
